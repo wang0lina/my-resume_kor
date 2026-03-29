@@ -81,7 +81,7 @@ h1 span {
 
 .intro {
   margin: 22px 0 0;
-  max-width: 620px;
+  max-width: 560px;
   font-size: 18px;
   line-height: 1.85;
   color: #475569;
@@ -135,8 +135,8 @@ h1 span {
   border: 1px solid rgba(125, 211, 252, 0.32);
   background: linear-gradient(180deg, rgba(219, 234, 254, 0.42) 0%, rgba(255, 255, 255, 0.98) 100%);
   box-shadow:
-    0 18px 40px rgba(59, 130, 246, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    0 25px 50px rgba(37, 99, 235, 0.18),
+    0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .profile-photo {
@@ -406,11 +406,11 @@ h2 {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 13px 18px;
+  padding: 14px 20px;
   border-radius: 16px;
   background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
   color: #ffffff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   box-shadow: 0 14px 30px rgba(37, 99, 235, 0.2);
   text-decoration: none;
