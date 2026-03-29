@@ -218,8 +218,7 @@ export default function App() {
                   <h3>Portone Onboarding Guide</h3>
                   <p>
                     신규 입사자의 온보딩 경험을 돕기 위해 설계한 웹페이지
-                    프로젝트입니다. 정보 전달성과 사용 편의성을 고려한 구조를
-                    확인할 수 있습니다.
+                    프로젝트입니다.
                   </p>
                 </div>
                 <span className="project-chip">Web Project</span>
