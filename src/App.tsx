@@ -118,12 +118,12 @@ export default function WangRinaResumePage() {
 
           <div className="flex items-center justify-center">
             <div className="w-full max-w-sm rounded-[2rem] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70">
-              <div className="flex aspect-[3/4] items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-sky-50 via-white to-slate-100">
+              <div className="flex aspect items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-sky-50 via-white to-slate-100">
                 <div className="text-center">
                   <img
                     src="/profile.jpg"
                     alt="왕리나 프로필"
-                    className="mx-auto h-24 w-24 rounded-full object-cover shadow-lg"
+                    className="w-[180px] h-[240px] object-cover rounded-xl shadow-lg"
                   />
                   <p className="mt-5 text-lg font-semibold text-slate-900">Lina Wang</p>
                   <p className="mt-1 text-sm text-slate-500">Profile photo can be added for deployment</p>
