@@ -81,10 +81,11 @@ h1 span {
 
 .intro {
   margin: 22px 0 0;
-  max-width: 680px;
+  max-width: 620px;
   font-size: 18px;
   line-height: 1.85;
   color: #475569;
+  word-break: keep-all;
 }
 
 .info-grid {
@@ -266,6 +267,7 @@ h2 {
   font-size: 14px;
   line-height: 1.7;
   color: #64748b;
+  word-break: keep-all;
 }
 
 .period {
@@ -378,7 +380,12 @@ h2 {
 .project-top p {
   margin: 10px 0 0;
   color: #475569;
-  line-height: 1.7;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.project-top p {
+  max-width: 420px;
 }
 
 .project-card {
@@ -439,6 +446,11 @@ h2 {
 
   h1 {
     font-size: 48px;
+  }
+
+  .intro,
+  .project-top p {
+    max-width: 100%;
   }
 }
 
