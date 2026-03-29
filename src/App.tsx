@@ -81,7 +81,7 @@ export default function App() {
             </div>
             <div className="info-card wide">
               <div className="info-label">Email</div>
-              <div className="info-value">wang.lina000303</div>
+              <div className="info-value">wang.lina000303@gmail.com</div>
             </div>
           </div>
         </div>
