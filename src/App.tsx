@@ -31,8 +31,7 @@ export default function App() {
     {
       company: "코리아 포트원 (Korea Portone)",
       role: "HR Intern · HR팀",
-      description:
-        "B2B 결제 SaaS를 개발하는 IT 스타트업(시리즈B)",
+      description: "B2B 결제 SaaS를 개발하는 IT 스타트업 (시리즈 B)",
       period: "2024.09 – 2025.02",
       sections: [
         {
@@ -56,100 +55,189 @@ export default function App() {
     },
   ];
 
+  const strengths = [
+    "Recruitment",
+    "Direct Sourcing",
+    "HR Operations",
+    "Onboarding",
+    "Compensation",
+    "Documentation",
+    "Communication",
+    "PPT",
+    "Excel",
+    "AI Tools",
+  ];
+
+  const education = [
+    {
+      title: "연세대학교(본교)",
+      meta: "2020.03 – 2026.02",
+      desc: "정치외교학과 / 언론홍보영상학부 · 학점 3.87 / 4.3",
+    },
+    {
+      title: "HRM 전문가",
+      meta: "2024.08",
+      desc: "발행기관: 한국공인노무사회",
+    },
+    {
+      title: "OPIc AL",
+      meta: "2026.02",
+      desc: "발행기관: ACTFL",
+    },
+  ];
+
   return (
-    <div className="page">
-      <section className="hero">
-        <div className="hero-left">
-          <p className="eyebrow">RESUME</p>
+    <div className="page-shell">
+      <main className="page">
+        <section className="hero">
+          <div className="hero-left">
+            <p className="eyebrow">RESUME</p>
+            <h1>
+              왕리나 <span>(Lina Wang)</span>
+            </h1>
+            <p className="intro">
+              채용과 인사운영 실무를 기반으로, 조직이 안정적으로 일할 수 있는 구조를
+              만들고 현장과 본사를 유연하게 연결하는 HR 인재입니다. 실행력 있는
+              운영과 정돈된 커뮤니케이션으로 구성원 경험과 조직 성과를 함께 높이는
+              일을 지향합니다.
+            </p>
 
-          <h1>
-            왕리나 <span>(Lina Wang)</span>
-          </h1>
+            <div className="info-grid">
+              <div className="info-card">
+                <div className="info-label">Phone</div>
+                <div className="info-value">010-5915-5982</div>
+              </div>
 
-          <p className="intro">
-            채용과 인사운영 실무를 기반으로, 조직이 안정적으로 일할 수 있는 구조를
-            만들고 현장과 본사를 유연하게 연결하는 HR 인재입니다.
-          </p>
+              <div className="info-card">
+                <div className="info-label">Birth</div>
+                <div className="info-value">2000.03.03</div>
+              </div>
 
-          <div className="info-grid">
-            <div className="info-card">
-              <div className="info-label">Phone</div>
-              <div className="info-value">010-5915-5982</div>
-            </div>
+              <div className="info-card wide">
+                <div className="info-label">Address</div>
+                <div className="info-value">경기도 과천시 부림1길 42-18</div>
+              </div>
 
-            <div className="info-card">
-              <div className="info-label">Birth</div>
-              <div className="info-value">2000.03.03</div>
-            </div>
-
-            <div className="info-card wide">
-              <div className="info-label">Address</div>
-              <div className="info-value">
-                경기도 과천시 부림1길 42-18
+              <div className="info-card wide">
+                <div className="info-label">Email</div>
+                <div className="info-value">wang.lina000303</div>
               </div>
             </div>
+          </div>
 
-            <div className="info-card wide">
-              <div className="info-label">Email</div>
-              <div className="info-value">wang.lina000303</div>
+          <div className="hero-right">
+            <div className="photo-card">
+              <img
+                src="/profile.jpg"
+                alt="왕리나 프로필"
+                className="profile-photo"
+              />
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="hero-right">
-          <div className="photo-card">
-            <img
-              src="/profile.jpg"
-              alt="왕리나 프로필"
-              className="profile-photo"
-            />
+        <section className="section-card">
+          <div className="section-head">
+            <div>
+              <p className="section-kicker">Career</p>
+              <h2>Work Experience</h2>
+            </div>
+            <div className="section-badge">Recruitment · HR Operations</div>
           </div>
-        </div>
-      </section>
 
-      <section className="section-card">
-        <h2>Work Experience</h2>
+          <div className="experience-list">
+            {experiences.map((job) => (
+              <article key={job.company} className="experience-card">
+                <div className="experience-top">
+                  <div className="experience-meta">
+                    <h3>{job.company}</h3>
+                    <p className="role">{job.role}</p>
+                    <p className="company-desc">{job.description}</p>
+                  </div>
+                  <p className="period">{job.period}</p>
+                </div>
 
-        {experiences.map((job) => (
-          <div key={job.company} className="experience-card">
-            <h3>{job.company}</h3>
-            <p className="role">{job.role}</p>
-            <p className="desc">{job.description}</p>
-            <p className="period">{job.period}</p>
-
-            {job.sections.map((sec) => (
-              <div key={sec.title}>
-                <strong>{sec.title}</strong>
-                <ul>
-                  {sec.items.map((item) => (
-                    <li key={item}>{item}</li>
+                <div className="section-grid">
+                  {job.sections.map((sec) => (
+                    <div key={sec.title} className="sub-card">
+                      <h4>{sec.title}</h4>
+                      <ul>
+                        {sec.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section-card">
+          <div className="section-head simple">
+            <h2>Core Strengths</h2>
+            <span className="small-chip">HR</span>
+          </div>
+
+          <div className="strengths">
+            {strengths.map((item) => (
+              <div key={item} className="strength-pill">
+                {item}
               </div>
             ))}
           </div>
-        ))}
-      </section>
+        </section>
 
-      <section className="section-card">
-        <h2>Education & Credentials</h2>
-        <ul>
-          <li>연세대학교(본교) 정치외교학과 / 언론홍보영상학부</li>
-          <li>HRM 전문가 (한국공인노무사회)</li>
-          <li>OPIc AL (ACTFL)</li>
-        </ul>
-      </section>
+        <section className="two-column">
+          <section className="section-card">
+            <div className="section-head simple">
+              <h2>Education & Credentials</h2>
+            </div>
 
-      <section className="section-card">
-        <h2>Projects</h2>
-        <a
-          href="https://portone-onboarding.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Portone Onboarding Guide
-        </a>
-      </section>
+            <div className="edu-list">
+              {education.map((item) => (
+                <div key={item.title} className="edu-card">
+                  <div className="edu-top">
+                    <strong>{item.title}</strong>
+                    <span>{item.meta}</span>
+                  </div>
+                  <p>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="section-card">
+            <div className="section-head simple">
+              <h2>Projects</h2>
+            </div>
+
+            <div className="project-card">
+              <div className="project-top">
+                <div>
+                  <h3>Portone Onboarding Guide</h3>
+                  <p>
+                    신규 입사자의 온보딩 경험을 돕기 위해 설계한 웹페이지
+                    프로젝트입니다. 정보 전달성과 사용 편의성을 고려한 구조를
+                    확인할 수 있습니다.
+                  </p>
+                </div>
+                <span className="project-chip">Web Project</span>
+              </div>
+
+              <a
+                href="https://portone-onboarding.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="project-link"
+              >
+                View Website
+              </a>
+            </div>
+          </section>
+        </section>
+      </main>
     </div>
   );
 }
