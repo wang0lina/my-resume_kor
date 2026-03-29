@@ -1,121 +1,101 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const experiences = [
+    {
+      company: "두잇 (DoEat)",
+      role: "HR Assistant · HR팀",
+      period: "2025.07 – 2025.10",
+      sections: [
+        {
+          title: "Recruitment",
+          items: [
+            "매장 인력 채용 운영 및 면접 일정 조율",
+            "다이렉트 소싱 및 후보자 풀 관리",
+            "채용 공고 리뉴얼 및 제작",
+            "온보딩 프로세스 운영 및 교육",
+          ],
+        },
+        {
+          title: "HR Operations",
+          items: [
+            "급여 및 인센티브 지급",
+            "근태 및 계약 관리",
+            "노무 이슈 대응",
+          ],
+        },
+      ],
+    },
+    {
+      company: "코리아 포트원 (Korea Portone)",
+      role: "HR Intern · HR팀",
+      period: "2024.09 – 2025.02",
+      sections: [
+        {
+          title: "Recruitment",
+          items: [
+            "전사 채용 운영",
+            "직무기술서 개편",
+            "다이렉트 소싱",
+            "온보딩 가이드북 제작",
+          ],
+        },
+        {
+          title: "HR Operations",
+          items: [
+            "입퇴사 프로세스 운영",
+            "평가 지원",
+            "인턴 프로그램 기획",
+          ],
+        },
+      ],
+    },
+  ];
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div style={{ padding: "40px", fontFamily: "Arial, sans-serif" }}>
+      <h1>왕리나 (Lina Wang)</h1>
+      <p>HR Resume Website</p>
 
-      <div className="ticks"></div>
+      <img
+        src="/profile.jpg"
+        alt="왕리나 프로필"
+        style={{ width: 120, borderRadius: "50%", marginTop: 16 }}
+      />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <h2 style={{ marginTop: 32 }}>Work Experience</h2>
+      {experiences.map((job) => (
+        <div key={job.company} style={{ marginBottom: 24 }}>
+          <h3>{job.company}</h3>
+          <p>{job.role}</p>
+          <p>{job.period}</p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+          {job.sections.map((sec) => (
+            <div key={sec.title} style={{ marginTop: 8 }}>
+              <strong>{sec.title}</strong>
+              <ul>
+                {sec.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ))}
+
+      <h2>Education & Credentials</h2>
+      <ul>
+        <li>연세대학교(본교) 정치외교학과 / 언론홍보영상학부</li>
+        <li>HRM 전문가 (발행기관: 한국공인노무사회)</li>
+        <li>OPIc AL (발행기관: ACTFL)</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <a
+        href="https://portone-onboarding.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Portone Onboarding Guide
+      </a>
+    </div>
+  );
 }
-
-export default App
